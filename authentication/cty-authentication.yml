@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.numina.co/
+docs: https://developer.numina.co/
+notes: >-
+  The Numina Graph API ("Numina-Graph") is a GraphQL API that authenticates
+  requests with JSON Web Tokens (JWT). A client obtains a token via an
+  authentication mutation, then presents it on subsequent GraphQL queries and
+  mutations using the HTTP Authorization header (Bearer <token>). No OpenAPI /
+  GraphQL SDL was captured for this repo, so schemes are documented from the
+  provider's public developer docs and API announcement rather than derived.
+summary:
+  types:
+  - http
+  http_schemes:
+  - bearer
+  bearer_format: JWT
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  description: >-
+    JWT bearer token presented in the Authorization header on every GraphQL
+    request. Obtained through the API's authentication mutation. Access is
+    granted per API user; developers request access at https://numina.co/api/.
+  sources:
+  - https://developer.numina.co/
