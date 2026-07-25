@@ -1,7 +1,28 @@
 aid: cty
-name: CTY
-description: CTY is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cty.png
+name: Numina
+description: >-
+  Numina is a New York City-based urban street-intelligence company (founded 2014,
+  backed by 500 Global and SOSV) whose privacy-first, edge-processing computer-vision
+  sensors measure how people, bicycles, and vehicles move through the public
+  right-of-way. Its "Know Your Streets" platform turns anonymous, aggregated
+  activity into multimodal mobility data for urban planners, municipal departments
+  of transportation, and facilities managers, and exposes that data through the
+  Numina Graph GraphQL API and a developer sandbox. (This profile was seeded as a
+  500 Global portfolio stub under the placeholder label "CTY"; its Website pointer
+  and 500 Global backing identify it as Numina / numina.co.)
 url: https://raw.githubusercontent.com/api-evangelist/cty/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +32,34 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Mobility
+- Urban Planning
+- Smart Cities
+- Computer Vision
+- Transportation
+- GraphQL
+- Sensors
+- Street Intelligence
+apis:
+- name: Numina Graph API
+  description: >-
+    The Numina Graph API ("Numina-Graph") is a GraphQL API, authenticated with JWT
+    bearer tokens, that exposes Numina's anonymous, aggregated street-activity data.
+    Core objects include Device (a Numina sensor identified by a unique serial number)
+    and Behavior Zone (a user-defined polygon used as a spatial filter for analytics).
+    Queries filter multimodal traffic volumes spatially and temporally and return
+    pre-computed visualizations. A developer sandbox provides ten days of real data
+    from the Downtown Brooklyn (Fulton Mall) deployment.
+  humanURL: https://developer.numina.co/
+  baseURL: https://api.numina.co
+  properties:
+  - type: Authentication
+    url: authentication/cty-authentication.yml
+  - type: Sandbox
+    url: sandbox/cty-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +68,26 @@ maintainers:
 common:
 - type: Website
   url: https://numina.co
+- type: DeveloperPortal
+  url: https://developer.numina.co/
+- type: Documentation
+  url: https://developer.numina.co/
+- type: APIReference
+  url: https://developer.numina.co/
+- type: SignUp
+  url: https://numina.co/api/
+- type: Support
+  url: https://numina.co/contact-apps/
+- type: Blog
+  url: https://medium.com/numina
+- type: Authentication
+  url: authentication/cty-authentication.yml
+- type: Sandbox
+  url: sandbox/cty-sandbox.yml
+- type: DomainSecurity
+  url: security/cty-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

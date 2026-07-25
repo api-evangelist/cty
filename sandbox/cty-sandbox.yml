@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: https://numina.co/announcing-numina-api-sandbox/
+docs: https://numina.co/api/
+summary: >-
+  Numina publishes a developer API sandbox so third-party developers can explore
+  real, street-level data before requesting production access. The sandbox
+  contains a fixed window of real (anonymous, aggregated) sensor data rather than
+  synthetic fixtures, so there are no test cards or magic identifiers to capture
+  (Numina is not a payments provider).
+sandbox:
+  access: Request API access at https://numina.co/api/ to be added as an API user with sandbox access.
+  auth: JWT bearer (same as production) - see authentication/cty-authentication.yml
+  dataset:
+    description: >-
+      Ten days of real, multimodal street activity captured from Numina's sensor
+      deployment in Downtown Brooklyn (Fulton Mall), New York City, with the
+      Downtown Brooklyn Partnership and New Lab.
+    location: Downtown Brooklyn / Fulton Mall, New York City
+    window_days: 10
+    modes: [pedestrian, bicycle, vehicle]
+    note: Fulton Mall records over 28,000 pedestrians on an average day.
+  capabilities:
+  - Spatially and temporally filter traffic volumes by mode of travel.
+  - Retrieve pre-computed visualizations.
+  - Query street-level activity data by Device (sensor) and Behavior Zone (polygon).
